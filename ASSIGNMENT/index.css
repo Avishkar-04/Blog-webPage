@@ -1,0 +1,193 @@
+/* Base styles for the website */
+body {
+    font-family: 'Arial, sans-serif';
+    background-color: #333; /* Light background color for readability */
+    color: #333; /* Main text color */
+    margin: 0;
+    padding: 0;
+}
+
+/* Consistent color palette */
+:root {
+    --primary-color: #4CAF50; /* Green for main theme */
+    --secondary-color: #f9f9f9; /* Light background */
+    --accent-color: #333; /* Dark accent for text */
+}
+
+/* Header styling */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+/* Navigation styling */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background-color: var(--accent-color);
+    padding: 10px;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+/* Blog Post Section */
+#blog article {
+    background-color: white;
+    border-radius: 5px;
+    margin: 20px 0;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Blog Title */
+#blog article h2 {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+/* Post Summary */
+#blog article p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Post Image */
+#blog article img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+/* About Me Section */
+#about {
+    background-color: var(--secondary-color);
+    padding: 40px;
+    text-align: center;
+}
+
+#about h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Contact Section */
+#contact {
+    background-color: var(--primary-color);
+    padding: 40px;
+    color: white;
+    text-align: center;
+}
+
+#contact a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile First Design */
+body {
+    font-size: 16px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+    nav ul {
+        justify-content: flex-start;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    body {
+        font-size: 20px;
+    }
+    nav ul {
+        justify-content: center;
+    }
+}
+
+/* Hover effects for images */
+#blog article img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Link hover effects */
+nav ul li a:hover {
+    background-color: var(--primary-color);
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Flexbox for navigation */
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Grid layout for blog posts */
+#blog {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
